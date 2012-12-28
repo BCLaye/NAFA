@@ -1,0 +1,42 @@
+@CHARSET "ISO-8859-1";
+
+#ajouter{
+	background: transparent url('../images/ajouter.gif') no-repeat;
+	border: 0;
+    cursor:pointer;
+    width: 15px;
+}
+
+#deleteLib{
+	background: transparent url('../images/delete.gif') no-repeat;
+	border: 0;
+    cursor:pointer;
+    width: 15px;
+}
+
+#editFct{
+	background: transparent url('../images/edit.gif') no-repeat;
+	border: 0;
+    cursor:pointer;
+    width: 15px;
+}
+
+#style1{
+	background: transparent url('../images/test1.png') no-repeat;
+	border: 0;
+    cursor:pointer;
+}
+
+#style2{
+	background: transparent url('../images/ajouter.gif') no-repeat;
+	border: 0;
+    cursor:pointer;
+    width: 15px;
+}
+
+#style3{
+	background: transparent url('../images/ajouter.gif') no-repeat;
+	border: 0;
+    cursor:pointer;
+    width: 15px;
+}

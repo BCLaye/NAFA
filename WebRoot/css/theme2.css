@@ -1,0 +1,176 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-family: 'PT Sans', sans-serif ;
+	font-size: 13px;
+	line-height: 18px;
+	color: #555;
+	margin: auto;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 0px 50px;
+}
+
+#header {
+	/* border-bottom: 1px solid #ccc; */
+	overflow: hidden;
+	/* padding: 0px 50px; */
+}
+
+#header #logo {
+	float: left;
+}
+
+#header #logo #logoDescription {
+	margin-top: auto;
+	padding: 15px 5px;
+	display: inline-block;
+}
+
+#header #logo #logoDescription h3 {
+	margin: 0;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing: 0.20em;
+	font-size: 2.5em;
+	font-weight: 700;
+	line-height: normal;
+	color: #444;
+}
+
+#header #logo #logoImg {
+	float: left;
+	display: inline-block;
+	padding-top: 10px;
+}
+
+#header #userBox {
+	float: right;
+	margin-top: 2px;
+}
+
+#header #userBox #userPicture {
+	float: right;
+	padding: 5px 0px 0px 5px;
+}
+
+#header #userBox #userPicture img {
+	border: 1px solid #BEC2C8;
+	background-color: white;
+	padding: 4px;
+	-o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+	width: 48px;
+	height: 64px;
+}
+
+#header #userBox #uiao {
+	float: left;
+	padding: 5px;
+}
+
+#header #userBox #uiao #userInfos {
+	font-family: 'PT Sans', sans-serif ;
+	padding-bottom: 1px;
+}
+
+#header #userBox #uiao #userInfos .userName {
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	font-size: 13px;
+	display: block;
+	max-width: 200px;
+}
+
+#header #userBox #uiao #userInfos .userFunction {
+	color: #888;
+	max-width: 200px;
+}
+
+/***********************************************************************************************************************************/
+#navMenu {
+	height: 35px;
+	margin: 0px;
+}
+
+#navMenu * {
+	margin: 0;
+	padding: 0;
+}
+
+#navMenu ul {
+	list-style: none;
+}
+
+/* LEVEL ONE */
+
+#navMenu ul.dropdown { 
+	position: relative;
+}
+
+#navMenu ul.dropdown li {
+	float: left;
+	zoom: 1;
+	/* background: #ccc; */
+}
+
+#navMenu ul.dropdown a:hover {
+/* 	color: #000; */
+}
+
+#navMenu ul.dropdown a:active {
+/* 	color: #ffa500; */
+}
+
+#navMenu ul.dropdown li a {
+	display: block;
+	padding: 7px 8px;
+}
+
+#navMenu ul.dropdown li:last-child a {
+	border-right: none;
+} /* Doesn't work in IE */
+
+
+
+/* LEVEL TWO */
+#navMenu ul.dropdown ul {
+	width: 250px;
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+#navMenu ul.dropdown ul li {
+	font-weight: normal;
+	border-bottom: 1px solid #ccc;
+	float: none;
+}
+
+/* IE 6 & 7 Needs Inline Block */
+#navMenu ul.dropdown ul li a {
+	width: 94%;
+	/* background-color: #000; */
+	display: inline-block;
+}
+
+/* LEVEL THREE */
+#navMenu ul.dropdown ul ul { 
+	left: 100%;
+	top: 0;
+}
+
+#navMenu ul.dropdown li:hover > ul {
+	visibility: visible;
+}
+/***********************************************************************************************************************************/
+
+#page {
+	margin-top: 50px;
+	display: table;
+	border: 1px solid red;
+	/* padding: 0px 50px; */
+}

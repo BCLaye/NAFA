@@ -1,0 +1,338 @@
+@CHARSET "ISO-8859-1";
+
+/******************* LES BOUTONS ****************************/
+
+input[type="submit"],
+input[type="button"],
+button {
+	outline: none;
+	display: inline-block;
+	padding: 6px 10px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);	
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;	
+	color: #444;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: whiteSmoke;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcxNDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFNkU2RTYiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cxNDApIiAvPgo8L3N2Zz4=);
+	background-repeat: repeat-x;
+	border: 1px solid #BBB;
+	border-bottom-color: #A2A2A2;
+}
+
+button.inactif-btn,
+button.inactif-btn[disabled] {
+	color: graytext;	
+	cursor: default;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+button.inactif-btn,
+button:hover,
+button.inactif-btn[disabled] {
+	background-color: #E6E6E6;
+	background-image: none;
+}
+
+button.alt-btn,
+button.warning-btn,
+button.danger-btn {
+	background-repeat: repeat-x;
+	color: #FFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+button.alt-btn {
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc3MTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiMxMUJBRTMiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwNTUyRDEiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c3MTUpIiAvPgo8L3N2Zz4=);
+	background-color: #27BCE8;
+}
+
+button.danger-btn {
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5NiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0U3NDk0OSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0UwMUQxRCIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzk2KSIgLz4KPC9zdmc+);
+	background-color: #E43838;
+}
+
+button.warning-btn {
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0NTAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQkI0NTAiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGODk0MDYiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0NTApIiAvPgo8L3N2Zz4=);
+	background-color: #FAA732;
+}
+
+button.alt-btn.inactif-btn,
+button.alt-btn.inactif-btn[disabled],
+button.warning-btn.inactif-btn,
+button.warning-btn.inactif-btn[disabled],
+button.danger-btn.inactif-btn,
+button.danger-btn.inactif-btn[disabled] {
+	color: #DDD;	
+	cursor: default;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+button.alt-btn.inactif-btn,
+button.alt-btn:hover,
+button.alt-btn.inactif-btn[disabled] {	
+	background-image: none;
+	background-color: #2958D9;	
+}
+
+button.warning-btn.inactif-btn,
+button.warning-btn:hover,
+button.warning-btn.inactif-btn[disabled] {
+	background-image: none;
+	background-color: #e4A307;
+}
+
+button.danger-btn.inactif-btn,
+button.danger-btn:hover,
+button.danger-btn.inactif-btn[disabled] {
+	background-image: none;
+	background-color: #d21c1c;
+}
+
+button.search-btn,
+button.save-btn,
+button.delete-btn,
+button.refresh-btn,
+button.add-btn,
+button.next-btn,
+button.previous-btn,
+button.attachment-btn,
+button.edit-btn,
+button.help-btn,
+button.download-btn,
+button.home-btn,
+button.enter-btn,
+button.graph_bar-btn,
+button.leave-btn,
+button.pdf-btn,
+button.printer-btn,
+button.upload-btn,
+button.settings-btn {
+	background-position: left;
+	text-indent: 20px;
+	background-repeat: no-repeat;
+	padding: 5px 15px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+
+button.search-btn {
+	background-image: url("../images/wphone/dark/search.png");
+}
+
+button.alt-btn.search-btn:hover,
+button.warning-btn.search-btn:hover,
+button.danger-btn.search-btn:hover {
+	background-image: url("../images/wphone/light/search.png");
+}
+
+button.save-btn {
+	background-image: url("../images/wphone/dark/save.png");
+}
+
+button.alt-btn.save-btn:hover,
+button.warning-btn.save-btn:hover,
+button.danger-btn.save-btn:hover {
+	background-image: url("../images/wphone/light/save.png");
+}
+
+
+button.delete-btn {
+	background-image: url("../images/wphone/dark/delete.png");
+}
+
+button.alt-btn.delete-btn:hover,
+button.warning-btn.delete-btn:hover,
+button.danger-btn.delete-btn:hover {
+	background-image: url("../images/wphone/light/delete.png");
+}
+
+button.refresh-btn {
+	background-image: url("../images/wphone/dark/refresh.png");
+}
+
+button.alt-btn.refresh-btn:hover,
+button.warning-btn.refresh-btn:hover,
+button.danger-btn.refresh-btn:hover {
+	background-image: url("../images/wphone/light/refresh.png");
+}
+
+button.add-btn {
+	background-image: url("../images/wphone/dark/add.png");
+}
+
+button.alt-btn.add-btn:hover,
+button.warning-btn.add-btn:hover,
+button.danger-btn.add-btn:hover {
+	background-image: url("../images/wphone/light/add.png");
+}
+
+button.next-btn {
+	background-image: url("../images/wphone/dark/next.png");
+}
+
+button.alt-btn.next-btn:hover,
+button.warning-btn.next-btn:hover,
+button.danger-btn.next-btn:hover {
+	background-image: url("../images/wphone/light/next.png");
+}
+
+button.previous-btn {
+	background-image: url("../images/wphone/dark/previous.png");
+}
+
+button.alt-btn.previous-btn:hover,
+button.warning-btn.previous-btn:hover,
+button.danger-btn.previous-btn:hover {
+	background-image: url("../images/wphone/light/previous.png");
+}
+
+button.attachment-btn {
+	background-image: url("../images/wphone/dark/attachment.png");
+}
+
+button.alt-btn.attachment-btn:hover,
+button.warning-btn.attachment-btn:hover,
+button.danger-btn.attachment-btn:hover {
+	background-image: url("../images/wphone/light/attachment.png");
+}
+
+button.edit-btn {
+	background-image: url("../images/wphone/dark/edit.png");
+}
+
+button.alt-btn.edit-btn:hover,
+button.warning-btn.edit-btn:hover,
+button.danger-btn.edit-btn:hover {
+	background-image: url("../images/wphone/light/edit.png");
+}
+
+button.help-btn {
+	background-image: url("../images/wphone/dark/help.png");
+}
+
+button.alt-btn.help-btn:hover,
+button.warning-btn.help-btn:hover,
+button.danger-btn.help-btn:hover {
+	background-image: url("../images/wphone/light/help.png");
+}
+
+button.download-btn {
+	background-image: url("../images/wphone/dark/download.png");
+}
+
+button.alt-btn.download-btn:hover,
+button.warning-btn.download-btn:hover,
+button.danger-btn.download-btn:hover {
+	background-image: url("../images/wphone/light/download.png");
+}
+
+button.home-btn {
+	background-image: url("../images/wphone/dark/home.png");
+}
+
+button.alt-btn.home-btn:hover,
+button.warning-btn.home-btn:hover,
+button.danger-btn.home-btn:hover {
+	background-image: url("../images/wphone/light/home.png");
+}
+
+button.enter-btn {
+	background-image: url("../images/wphone/dark/enter.png");
+}
+
+button.alt-btn.enter-btn:hover,
+button.warning-btn.enter-btn:hover,
+button.danger-btn.enter-btn:hover {
+	background-image: url("../images/wphone/light/enter.png");
+}
+
+button.graph_bar-btn {
+	background-image: url("../images/wphone/dark/graph_bar.png");
+}
+
+button.alt-btn.graph_bar-btn:hover,
+button.warning-btn.graph_bar-btn:hover,
+button.danger-btn.graph_bar-btn:hover {
+	background-image: url("../images/wphone/light/graph_bar.png");
+}
+
+button.settings-btn {
+	background-image: url("../images/wphone/dark/settings.png");
+}
+
+button.alt-btn.settings-btn:hover,
+button.warning-btn.settings-btn:hover,
+button.danger-btn.settings-btn:hover {
+	background-image: url("../images/wphone/light/settings.png");
+}
+
+button.pdf-btn {
+	background-image: url("../images/wphone/dark/pdf.png");
+}
+
+button.alt-btn.pdf-btn:hover,
+button.warning-btn.pdf-btn:hover,
+button.danger-btn.pdf-btn:hover {
+	background-image: url("../images/wphone/light/pdf.png");
+}
+
+button.printer-btn {
+	background-image: url("../images/wphone/dark/printer.png");
+}
+
+button.alt-btn.printer-btn:hover,
+button.warning-btn.printer-btn:hover,
+button.danger-btn.printer-btn:hover {
+	background-image: url("../images/wphone/light/printer.png");
+}
+
+button.upload-btn {
+	background-image: url("../images/wphone/dark/upload.png");
+}
+
+button.alt-btn.upload-btn:hover,
+button.warning-btn.upload-btn:hover,
+button.danger-btn.upload-btn:hover {
+	background-image: url("../images/wphone/light/upload.png");
+}
+
+button.leave-btn {
+	background-image: url("../images/wphone/dark/leave.png");
+}
+
+button.alt-btn.leave-btn:hover,
+button.warning-btn.leave-btn:hover,
+button.danger-btn.leave-btn:hover {
+	background-image: url("../images/wphone/light/leave.png");
+}
+
+/****************************************************************************************/
+
+body {
+	/* width:1400px; */
+}

@@ -1,0 +1,254 @@
+/* ------------ Ico Moon Styles  by Pacheikh Cisse --------- */
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../font/icomoon.eot');
+	src: url('../font/icomoon.eot?#iefix') format('embedded-opentype'),
+		 url('../font/icomoon.svg#icomoon') format('svg'),
+		 url('../font/icomoon.woff') format('woff'),
+		 url('../font/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="nafa-"]:before, [class*=" nafa-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	margin-right: .3em;
+	display: inline-block;
+  	text-decoration: inherit;
+  	/* font-size: 1.2em; */
+}
+
+a [class^="nafa-"], a [class*=" nafa-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.nafa-large:before {
+  vertical-align: top;
+  font-size: 1.3333333333333333em;
+}
+
+.nafa-larger:before {
+  vertical-align: top;
+  font-size: 1.6666666666666em;
+}
+
+/* a [class^="nafa-"], a [class*=" nafa-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}i
+
+.nafa-large:before {
+  vertical-align: top;
+  font-size: 1.3333333333333333em;
+}
+
+.btn [class^="nafa-"], .btn [class*=" nafa-"] {
+  keeps button heights with and without icons the same
+  line-height: .9em;
+}
+
+li [class^="nafa-"], li [class*=" nafa-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+
+li .nafa-large[class^="nafa-"], li .nafa-large[class*=" nafa-"] {
+  1.5 increased font size for nafa-large * 1.25 width
+  width: 1.875em;
+}
+*/
+li[class^="nafa-"], li[class*=" nafa-"] {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+li[class^="nafa-"]:before, li[class*=" nafa-"]:before {
+  text-indent: -2em;
+  text-align: center;
+}
+/*
+li[class^="nafa-"].nafa-large:before, li[class*=" nafa-"].nafa-large:before {
+  text-indent: -1.3333333333333333em;
+}
+ */
+.nafa-bag:before {
+	content: "\e02b";
+}
+.nafa-newspaper:before {
+	content: "\e001";
+}
+.nafa-help:before {
+	content: "\e002";
+}
+.nafa-calculator:before {
+	content: "\e003";
+}
+.nafa-safe:before {
+	content: "\e004";
+}
+.nafa-equalizer:before {
+	content: "\e005";
+}
+.nafa-file-excel:before {
+	content: "\e006";
+}
+.nafa-tools:before {
+	content: "\e007";
+}
+.nafa-calendar:before {
+	content: "\e008";
+}
+.nafa-open:before {
+	content: "\e009";
+}
+.nafa-console:before {
+	content: "\e00a";
+}
+.nafa-calculate:before {
+	content: "\e00b";
+}
+.nafa-plus:before {
+	content: "\e00c";
+}
+.nafa-attachment:before {
+	content: "\e00d";
+}
+.nafa-chat:before {
+	content: "\e00e";
+}
+.nafa-trashcan:before {
+	content: "\e00f";
+}
+.nafa-download:before {
+	content: "\e010";
+}
+.nafa-pencil:before {
+	content: "\e011";
+}
+.nafa-enter:before {
+	content: "\e012";
+}
+.nafa-stats-up:before {
+	content: "\e013";
+}
+.nafa-chart:before {
+	content: "\e014";
+}
+.nafa-statistics:before {
+	content: "\e015";
+}
+.nafa-chart-2:before {
+	content: "\e016";
+}
+.nafa-chart-3:before {
+	content: "\e017";
+}
+.nafa-home:before {
+	content: "\e018";
+}
+.nafa-envelope:before {
+	content: "\e019";
+}
+.nafa-envelope-open:before {
+	content: "\e01a";
+}
+.nafa-exit:before {
+	content: "\e01b";
+}
+.nafa-next:before {
+	content: "\e01c";
+}
+.nafa-previous:before {
+	content: "\e01d";
+}
+.nafa-previous-2:before {
+	content: "\e01e";
+}
+.nafa-next-2:before {
+	content: "\e01f";
+}
+.nafa-down:before {
+	content: "\e020";
+}
+.nafa-up:before {
+	content: "\e021";
+}
+.nafa-first:before {
+	content: "\e022";
+}
+.nafa-last:before {
+	content: "\e023";
+}
+.nafa-file-pdf:before {
+	content: "\e024";
+}
+.nafa-file-word:before {
+	content: "\e025";
+}
+.nafa-printer:before {
+	content: "\e026";
+}
+.nafa-refresh:before {
+	content: "\e027";
+}
+.nafa-save:before {
+	content: "\e028";
+}
+.nafa-search:before {
+	content: "\e029";
+}
+.nafa-tools-2:before {
+	content: "\e02a";
+}
+.nafa-upload:before {
+	content: "\e02c";
+}
+.nafa-archive:before {
+	content: "\e02d";
+}
+.nafa-list:before {
+	content: "\e02e";
+}
+.nafa-switch:before {
+	content: "\e02f";
+}
+.nafa-switch-2:before {
+	content: "\e030";
+}
+.nafa-facebook:before {
+	content: "\e000";
+}
+.nafa-twitter:before {
+	content: "\e031";
+}
+.nafa-feed:before {
+	content: "\e032";
+}
+.nafa-googleplus:before {
+	content: "\e033";
+}
+.nafa-skype:before {
+	content: "\e034";
+}
+.nafa-twitter-2:before {
+	content: "\e035";
+}
+.nafa-twitter-old:before {
+	content: "\e036";
+}
+.nafa-facebook-2:before {
+	content: "\e037";
+}
+.nafa-google-plus:before {
+	content: "\e038";
+}
+.nafa-google-plus-2:before {
+	content: "\e039";
+}

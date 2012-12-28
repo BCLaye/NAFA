@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+     
+   <!-- _____________________________Mapping de l'Application___________________________________________ -->    
+	<bean id="Mapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/acceuil.html">IndexController</prop>
+				<prop key="/Nafa.html">AcceuilController</prop>
+				<prop key="/connexion.html">ConnexionController</prop>
+				<prop key="/fonctionnalites.html">FonctionnalitesController</prop>
+				<prop key="/utilisateurs.html">UtilisateursController</prop>
+				<prop key="/entites.html">EntitesController</prop>
+				<prop key="/profils.html">ProfilsController</prop>
+				<prop key="/UtilisateurProfil.html">UtilisateurProfilController</prop>
+				<prop key="/FonctionnalitesProfil.html">FonctionnalitesProfilController</prop>
+				<prop key="/validation.html">ValidationControlleur</prop>
+				<prop key="/ChangerMotDPasse.html">ChangerMotDPasseController</prop>
+				<prop key="/Fonctions.html">FonctionsController</prop>
+				<prop key="/Menus.html">MenusController</prop>
+				<prop key="/Deconnexion.html">DeconnexionController</prop>
+				<prop key="/Preferences.html">PreferencesController</prop>
+			</props>
+		</property>
+	</bean>	
+<!-- _________________________________IndexController et ses methodes______________________________ -->
+     <bean id="IndexController" class="controllers.IndexController">
+          <property name="methodNameResolver">
+               <ref local="lesMethodesIndex"/>
+          </property>	
+     </bean>
+     <bean id="lesMethodesIndex" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+          <property name="paramName"><value>action</value></property>
+          <property name="defaultMethodName"><value>init</value></property>
+     </bean>
+<!-- _________________________________ AcceuilController ___________________________________________ -->
+     <bean id="AcceuilController" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+          <property name="viewName" value="Acceuil"/>
+     </bean>     
+<!-- _________________________________ConnexionController et son validateur_________________________ -->     
+     <bean id="ConnexionController" class="controllers.ConnexionController">
+          <property name="sessionForm"><value>true</value></property>
+          <property name="commandName"><value>utilisateur</value></property>
+          <property name="commandClass"><value>modele.metiers.Utilisateur</value></property>
+          <property name="formView"><value>Connexion</value></property>
+     </bean>
+<!-- ________________________________FonctionnalitesController et ses methodes ____________________ -->
+     <bean id="FonctionnalitesController" class="controllers.FonctionnalitesController">
+          <property name="methodNameResolver">
+              <ref local="lesMethodFonctionnalites"/>
+          </property>
+     </bean>  
+     <bean id="lesMethodFonctionnalites" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+         <property name="paramName"><value>action</value></property>
+         <property name="defaultMethodName"><value>init</value></property>
+     </bean>   
+<!-- _______________________________UtilisateursController et ses methodes _________________________ -->
+     <bean id="UtilisateursController" class="controllers.UtilisateursController">
+         <property name="methodNameResolver">
+               <ref local="lesMethodesUtilisateurs"/>
+         </property>
+     </bean>   
+     <bean id="lesMethodesUtilisateurs" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+          <property name="paramName"><value>action</value></property>
+          <property name="defaultMethodName"><value>init</value></property>
+     </bean>  
+<!-- _____________________________EntitesController et ses methodes _______________________________ -->
+     <bean id="EntitesController" class="controllers.EntitesController">
+          <property name="methodNameResolver">
+               <ref local="lesMethodesEtites"/>
+          </property>
+     </bean>  
+     <bean id="lesMethodesEtites" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+          <property name="paramName"><value>action</value></property>
+          <property name="defaultMethodName"><value>init</value></property>
+     </bean>   
+<!-- ___________________________ ProfilsController et ses méthodes _______________________________ -->
+     <bean id="ProfilsController" class="controllers.ProfilsController">
+          <property name="methodNameResolver">
+               <ref local="lesMethodesProfils"/>
+          </property>
+     </bean> 
+     <bean id="lesMethodesProfils" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+         <property name="paramName"><value>action</value></property>
+         <property name="defaultMethodName"><value>init</value></property>
+     </bean>    
+<!-- ____________________________UtilisateurProfilController et ses methodes ________________________________________ --> 
+     <bean id="UtilisateurProfilController" class="controllers.UtilisateurProfilController">
+         <property name="methodNameResolver">
+                <ref local="lesMethodesUtilProfil"/>
+         </property>
+     </bean>  
+     <bean id="lesMethodesUtilProfil" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+          <property name="paramName"><value>action</value></property>
+          <property name="defaultMethodName"><value>init</value></property>
+     </bean>  
+<!-- ___________________________ FonctionnalitesProfilController et ses methodes ____________________________________ -->
+     <bean id="FonctionnalitesProfilController" class="controllers.FonctionnalitesProfilController">
+          <property name="methodNameResolver">
+               <ref local="lesmethodesFonctionnalitesProfil"/>
+          </property>
+     </bean>
+     <bean id="lesmethodesFonctionnalitesProfil" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+          <property name="paramName"><value>action</value></property>
+          <property name="defaultMethodName"><value>init</value></property>
+     </bean>    
+<!-- ________________________ ValidationControlleur et ses methodes _____________________________________________________ -->     
+     <bean id="ValidationControlleur" class="controllers.ValidationControlleur">
+          <property name="methodNameResolver">
+                <ref local="lesMethodesValidation"/>
+          </property>
+     </bean> 
+     <bean id="lesMethodesValidation" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+          <property name="paramName"><value>action</value></property>
+          <property name="defaultMethodName"><value>init</value></property>
+     </bean>
+<!-- _________________________ ChangerMotDPasseController et ses methodes ___________________________________________ -->  
+     <bean id="ChangerMotDPasseController" class="controllers.ChangerMotDPasseController">
+          <property name="methodNameResolver">
+                <ref local="lesMethodesChangerMDP"/>
+          </property>
+     </bean> 
+     <bean id="lesMethodesChangerMDP" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+         <property name="paramName"><value>action</value></property>
+         <property name="defaultMethodName"><value>annulerChangerMDP</value></property>
+     </bean>  
+<!-- ________________________ FonctionsController et ses methodes __________________________________________________ -->
+     <bean id="FonctionsController" class="controllers.FonctionsController">
+         <property name="methodNameResolver">
+             <ref local="lesMethodesFonctions"/>
+         </property>
+     </bean> 
+     <bean id="lesMethodesFonctions" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+          <property name="paramName"><value>action</value></property>
+          <property name="defaultMethodName"><value>init</value></property>
+     </bean>    
+<!-- _________________________ MenusController et ses methodes ______________________________________________________ --> 
+     <bean id="MenusController" class="controllers.MenusController">
+         <property name="methodNameResolver">
+              <ref local="lesMethodesMenus"/>
+         </property>
+     </bean>  
+     <bean id="lesMethodesMenus" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+         <property name="paramName"><value>action</value></property>
+         <property name="defaultMethodName"><value>init</value></property>
+     </bean>  
+<!-- _________________________ DeconnexionController et ses methodes _______________________________________________ -->     
+     <bean id="DeconnexionController" class="controllers.DeconnexionController">
+        <property name="methodNameResolver">
+           <ref local="lesMethodesDeconnexion"/>
+        </property>
+     </bean>
+     <bean id="lesMethodesDeconnexion" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+         <property name="paramName"><value>action</value></property>
+         <property name="defaultMethodName"><value>deconnexion</value></property> 
+     </bean>
+<!-- _____________________________________PreferencesController et ses methodes ____________________________________ -->
+     <bean id="PreferencesController" class="controllers.PreferencesController">
+          <property name="methodNameResolver">
+               <ref local="lesMethodesPreferences"/>
+          </property>
+     </bean>
+     <bean id="lesMethodesPreferences" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+         <property name="paramName"><value>action</value></property>
+         <property name="defaultMethodName"><value>init</value></property>
+     </bean>
+<!-- ________________________________________________________________________________________________________________ -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="prefix">
+			<value>/WEB-INF/vues/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename">
+			<value>messages</value>
+		</property>
+	</bean>
+
+</beans>       
