@@ -86,11 +86,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <td></td>
              <tr>
                 <td></td>
-                <td><input type="radio" name="theme" value="theme1"/>Theme1<br/></td>
+                <td><input type="radio" name="theme" value="theme1"/>menu vertical<br/></td>
              </tr>
              <tr>
                 <td></td>   
-                <td><input type="radio" name="theme" value="theme2"/>Theme2<br/></td>
+                <td><input type="radio" name="theme" value="theme2"/>menu horizontal<br/></td>
             </tr>
             
             <tr>
