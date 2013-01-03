@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Maquette NAFA</title>
+	<title>${utilisateur.langue.acceuil}</title>
 	
 	
 	

@@ -20,14 +20,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	<script type="text/javascript" src="javascript/jquery-1.8.0.js"></script>
 	<script type="text/javascript" src="javascript/bootstrap.js"></script>
-	
-	<link href='css/fonts.css' rel='stylesheet' type='text/css'>
-	<!-- <link rel="stylesheet" href="style.css" type="text/css" /> -->
-	<%-- <link rel="stylesheet" type="text/css" href="css/${utilisateur.preference.id}.css"> --%>
-	<link rel="stylesheet" type="text/css" href="css/theme1.css">
-	<link href="css/bootstrap.css" rel="stylesheet" type='text/css'>
-	<link href="css/icomoon.css" rel="stylesheet" type='text/css'>
-	<link href='css/boutons.css' rel='stylesheet' type='text/css'>
 <script type="text/javascript">    
     function envoyerAction(code){
     with(document.formEntites){
@@ -188,7 +180,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </tr>
            </c:if>   
               <tr>
-                 <td>${utilisateur.langue.nom} &nbsp;&nbsp;&nbsp;<input type="button" id="ajouter" onclick='envoyerAction("ajouterNom")'/></td>
+                 <td>${utilisateur.langue.nom} &nbsp;&nbsp;&nbsp;<button class="nafa-plus" onclick='envoyerAction("ajouterNom")'></button><input type="button" id="ajouter" onclick='envoyerAction("ajouterNom")'/></td>
                  <td>
                    <table>
                             <thead>
