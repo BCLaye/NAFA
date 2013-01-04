@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <link rel="stylesheet" type="text/css" href="css/theme2.css">
 <link rel="stylesheet" type="text/css" href="css/${utilisateur.preference.couleur}.css">
+
 <link href='css/fonts.css' rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.css" rel="stylesheet" type='text/css'>
 <link href="css/icomoon.css" rel="stylesheet" type='text/css'>
@@ -8,6 +9,9 @@
 <link href="css/customcolorpicker.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="javascript/jquery-1.8.0.js"></script>
+<script src="javascript/jquery.ui.core.js" type="text/javascript"></script>
+<script src="javascript/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="javascript/jquery.ui.datepicker.js" type="text/javascript"></script>
 <script type="text/javascript" src="javascript/bootstrap.js"></script>
 <script src="javascript/customColorPicker.js" type="text/javascript"></script> 
 
