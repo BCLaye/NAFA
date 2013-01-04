@@ -7,6 +7,8 @@
 <link href='css/boutons.css' rel='stylesheet' type='text/css'>
 <link href="css/customcolorpicker.css" rel="stylesheet" type="text/css" />
 
+<script type="text/javascript" src="javascript/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="javascript/bootstrap.js"></script>
 <script src="javascript/customColorPicker.js" type="text/javascript"></script> 
 
 <div id="logo">

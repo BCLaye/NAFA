@@ -12,14 +12,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <title>${utilisateur.langue.labelEntites}</title>
     
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
 	
-	<script type="text/javascript" src="javascript/jquery-1.8.0.js"></script>
-	<script type="text/javascript" src="javascript/bootstrap.js"></script>
+	
 <script type="text/javascript">    
     function envoyerAction(code){
     with(document.formEntites){
