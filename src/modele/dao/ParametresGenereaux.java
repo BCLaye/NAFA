@@ -161,7 +161,7 @@ public class ParametresGenereaux {
 		langue.setModelAffichageMenu("Model affichage menus");
 		langue.setVertical("Vertical");
 		langue.setHorizontal("Horizontal");
-		langue.setContext("Contexte");
+		langue.setContext("Couleur de théme");
 		
 		ILangue lagueDAO = new LangueDAO();
 		lagueDAO.save(langue);
@@ -308,7 +308,7 @@ public class ParametresGenereaux {
 				anglais.setModelAffichageMenu("model of items positing");
 				anglais.setVertical("Vertical");
 				anglais.setHorizontal("Horizontal");
-				anglais.setContext("Context");
+				anglais.setContext("Color of the preference");
 				
 				//------------------- Selection Oui/Non -----------------------------------
 				anglais.setOui("Yes");
@@ -337,11 +337,11 @@ public class ParametresGenereaux {
 				ArrayList<Preferences> listPref = new ArrayList<Preferences>();
 				listPref.add(new Preferences("theme1B","theme1","bleu"));
 				listPref.add(new Preferences("theme1R","theme1","rouge"));
-				listPref.add(new Preferences("theme1V","theme1","verte"));
+				listPref.add(new Preferences("theme1V","theme1","vert"));
 				listPref.add(new Preferences("theme1N","theme1","noir"));
 				listPref.add(new Preferences("theme2B","theme2","bleu"));
 				listPref.add(new Preferences("theme2R","theme2","rouge"));
-				listPref.add(new Preferences("theme2V","theme2","verte"));
+				listPref.add(new Preferences("theme2V","theme2","vert"));
 				listPref.add(new Preferences("theme2N","theme2","noir"));
 				
 				IPreferences prefDAO = new PreferencesDAO();

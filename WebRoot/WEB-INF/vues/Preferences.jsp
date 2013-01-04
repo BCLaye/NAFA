@@ -65,21 +65,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div id="contentDescription">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a venenatis.</div>
 				<div id="contentBox">
 <!-- ---------------------------------début contenu de la Page-------------------------------------------------- -->
-	<form class="form-horizontal" action="Preferences.html" method="get" name="formPreferences" id="preferences">
-		<fieldset><legend>Th&egrave;me</legend></fieldset>
+	<form class="form-horizontal" action="Preferences.html" method="post" name="formPreferences" id="preferences">
+		<fieldset><legend>${utilisateur.langue.preferences}</legend></fieldset>
        <div class="container-fluid">
 	       <div class="row-fluid">
 	       		<div class="span2">
-	       			<label>Orientation de menu</label>
+	       			<label>${utilisateur.langue.modelAffichageMenu}</label>
 			       	<label class="radio">
-			       		<input type="radio" name="theme" id="theme1" value="theme1" checked>horizontale	       
+			       		<input type="radio" name="theme" id="theme1" value="theme1" checked>${utilisateur.langue.horizontal}       
 			       	</label>
 			       	<label class="radio">
-			       		<input type="radio" name="theme" id="theme2" value="theme2">verticale
+			       		<input type="radio" name="theme" id="theme2" value="theme2">${utilisateur.langue.vertical}
 			       	</label>
 	       		</div>
 	       		<div class="span5">
-	       			<label>Couleur de th&egrave;me</label>  
+	       			<label>${utilisateur.langue.context}</label>  
 	       			<span class="colorpicker">
 			          	<span class="colorbox">
 			          		<b class="selected" style="background:rgb(73, 175, 205);" title="Bleu"></b>
@@ -108,9 +108,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        </div>
        <div class="control-group">
        		<label class="control-label">Image de profil</label>
-       		<!-- <div class="controls">
-       			<input type="file" name="upload" />
-       		</div> -->
        		    <div class="btn-group">
 				    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 				    Action
@@ -124,7 +121,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        
 
        <!-- <a class="btn" onclick="document.getElementsByName('formPreferences').submit();">Enregistrer les modifications</a> -->
-       <input type="submit" class="btn" value="Enregistrer les modifications" />
+       <input type="button" value="${utilisateur.langue.valider}" onclick='envoyerAction("enregister")'/>
        <input type="hidden" name="couleur" id="couleur" value="" />     
        <input type="hidden" name="action"/>
 

@@ -180,7 +180,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </tr>
            </c:if>   
               <tr>
-                 <td>${utilisateur.langue.nom} &nbsp;&nbsp;&nbsp;<button class="nafa-plus" onclick='envoyerAction("ajouterNom")'></button><input type="button" id="ajouter" onclick='envoyerAction("ajouterNom")'/></td>
+                 <td>${utilisateur.langue.nom} &nbsp;&nbsp;&nbsp;<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterNom")'></button></td>
                  <td>
                    <table>
                             <thead>
