@@ -17,6 +17,7 @@
 /***********************************************************************************************/
 
 #navMenu {
+
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #363636;
@@ -31,6 +32,15 @@
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #222222;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);		
+}
+
+#page #leftPage #navMenu {
+	color: inherit;
+	text-shadow: inherit;
+	background-color: inherit;
+	background-image: none;
+	background-repeat: no-repeat;
+	border-color: inherit;	
 }
 
 /* LEVEL ONE */

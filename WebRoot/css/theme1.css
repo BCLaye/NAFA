@@ -325,8 +325,12 @@ body {
 
 #page #rightPage #content #contentTitle {
 	font: bold 30px 'Yanone Kaffeesatz', sans-serif;
-	padding-bottom: 15px;
+	padding-bottom: 20px;
 	/* font-size:   */
+}
+
+#page #rightPage #content #contentBox {
+	padding-top: 20px;
 }
 
 #footer {

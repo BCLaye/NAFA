@@ -15,7 +15,7 @@
 
 /***********************************************************************************************/
 
-#navMenu {
+#page #leftPage #navMenu {
 	
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -31,6 +31,15 @@
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #bd362f;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);	
+}
+
+#page #leftPage #navMenu {
+	color: inherit;
+	text-shadow: inherit;
+	background-color: inherit;
+	background-image: none;
+	background-repeat: no-repeat;
+	border-color: inherit;	
 }
 
 /* LEVEL ONE */
@@ -83,6 +92,7 @@
 
 /***********************************************************************************************/
 
+input[type="submit"].btn,
 .btn {
   display: inline-block;
   *display: inline;
@@ -115,6 +125,8 @@
 .btn:first-child {
   *margin-left: 0;
 }
+
+input[type="submit"].btn:hover,
 .btn:hover {
   text-decoration: none;
   background-position: 0 -15px;
@@ -123,6 +135,7 @@
   -o-transition: background-position 0.1s linear;
   transition: background-position 0.1s linear;
 }
+
 .btn:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
@@ -194,6 +207,7 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
+input[type="submit"].btn,
 .btn {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -210,6 +224,10 @@ input[type="button"].btn-block {
   *background-color: #bd362f;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
+
+input[type="submit"].btn:hover,
+input[type="submit"].btn.disabled,
+input[type="submit"].btn[disabled],
 .btn:hover,
 .btn:active,
 .btn.active,

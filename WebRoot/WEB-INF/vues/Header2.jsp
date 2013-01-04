@@ -1,10 +1,13 @@
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    <link rel="stylesheet" type="text/css" href="css/theme2.css">
-    <link rel="stylesheet" type="text/css" href="css/${utilisateur.preference.couleur}.css">
-    <link href='css/fonts.css' rel='stylesheet' type='text/css'>
-	<link href="css/bootstrap.css" rel="stylesheet" type='text/css'>
-	<link href="css/icomoon.css" rel="stylesheet" type='text/css'>
-	<link href='css/boutons.css' rel='stylesheet' type='text/css'>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<link rel="stylesheet" type="text/css" href="css/theme2.css">
+<link rel="stylesheet" type="text/css" href="css/${utilisateur.preference.couleur}.css">
+<link href='css/fonts.css' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.css" rel="stylesheet" type='text/css'>
+<link href="css/icomoon.css" rel="stylesheet" type='text/css'>
+<link href='css/boutons.css' rel='stylesheet' type='text/css'>
+<link href="css/customcolorpicker.css" rel="stylesheet" type="text/css" />
+
+<script src="javascript/customColorPicker.js" type="text/javascript"></script> 
 
 <div id="logo">
 			<div id="logoImg">
