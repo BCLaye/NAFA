@@ -12,16 +12,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <title>${utilisateur.langue.labelUtilisateur}</title> 
     
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	
-     <link rel="stylesheet" href="css/jquery.ui.all.css" />
-    	
-  <script src="javascript/jquery-1.8.0.js" type="text/javascript"></script>
-	
 	
 	<link rel="stylesheet" href="css/demos.css" /> 
 	
@@ -235,7 +225,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <td><input type="text" name="dateFinValid" value="${dateFin}" id="datepicker2"/><font color="red">${errorDateFin}</font></td>
               </tr>    
               <tr>
-                 <td>${utilisateur.langue.profils} &nbsp;&nbsp;&nbsp; <input type="button" id="ajouter" onclick='envoyerAction("ajouterProfil")'/></td>
+                 <td>${utilisateur.langue.profils}<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterProfil")'></button></td>
                  <td></td>
               </tr>
               <c:if test="${utilisateurCourant.profils != null}">
@@ -244,7 +234,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <td></td>
                     <td>
                       <input type="text" value="${profil.profil.codeProfil}" disabled="disabled"/>
-                      &nbsp;&nbsp;&nbsp;<input type="button" id="deleteLib" onclick='deleteProfil("${profil.profil.codeProfil}")'/>&nbsp;&nbsp;&nbsp;<input type="button" id="editFct" onclick='editerProfil("${profil.profil.codeProfil}")'/>
+                      <button class="btn btn-link nafa-pencil nafa-large" onclick='editerProfil("${profil.profil.codeProfil}")'></button><button class="btn btn-link nafa-trashcan nafa-large" onclick='deleteProfil("${profil.profil.codeProfil}")'></button>
                     </td>
                 </tr>
                 </c:forEach>

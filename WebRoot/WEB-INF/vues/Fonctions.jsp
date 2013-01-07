@@ -133,7 +133,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </tr>
          </c:if> 
          <tr>
-            <td>${utilisateur.langue.nom} &nbsp;&nbsp;&nbsp;<input type="button" id="ajouter" onclick='envoyerAction("ajouterNom")'/>
+            <td>${utilisateur.langue.nom}<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterNom")'></button>
             <td>
              
                <table>
@@ -147,7 +147,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                           <c:forEach items="${fonctionCourant.libelleFonctions}" var="libelle">
                             <tr>
                                <td><input type="text" value="${libelle.langue.nomLangue}" disabled="disabled"/></td>
-                               <td><input type="text" value="${libelle.libFonctions}" disabled="disabled"/>&nbsp;&nbsp;&nbsp;<input type="button" id="editFct" onclick='EditerLibelle("${libelle.langue.codeLangue}")'/>&nbsp;&nbsp;&nbsp;<input type="button" id="deleteLib" onclick='deleteLibelle("${libelle.langue.codeLangue}")'/></td>
+                               <td><input type="text" value="${libelle.libFonctions}" disabled="disabled"/><button class="btn btn-link nafa-pencil nafa-large" onclick='EditerLibelle("${libelle.langue.codeLangue}")'></button><button class="btn btn-link nafa-trashcan nafa-large" onclick='deleteLibelle("${libelle.langue.codeLangue}")'></button></td>
                             </tr>   
                           </c:forEach>
                          <c:if test="${affLangue != null}">
@@ -184,7 +184,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <c:forEach items="${fonctionCourant.entite}" var="entite">
            <tr>
                <td></td>
-               <td><input type="text" disabled="disabled" value="${entite.codeEntite}"/>&nbsp;&nbsp;&nbsp;<input type="button" id="deleteLib"/></td>
+               <td><input type="text" disabled="disabled" value="${entite.codeEntite}"/><button class="btn btn-link nafa-trashcan nafa-large" onclick='deleteLib()'></button></td>
            </tr>
          </c:forEach>
            <tr>

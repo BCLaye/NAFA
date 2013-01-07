@@ -99,7 +99,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </td>
              </tr>
              <tr>
-                <td>${utilisateur.langue.fonctionnalites}&nbsp;&nbsp;&nbsp;<input type="button" id="ajouter" onclick='envoyerAction("ajouterFonctionnalite")'/></td>
+                <td>${utilisateur.langue.fonctionnalites}<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterFonctionnalite")'></button></td>
                 <td></td>
              </tr>
              <tr>
@@ -117,7 +117,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <c:forEach items="${fctionnaliteProfilCourant.profil.fonctionnalitesProfil}" var="fonctionnalitesProfil">
                          <tr>
                             <td><input type="text" value="${fonctionnalitesProfil.fonctionnalite.codeFonctionnalite}" disabled="disabled" /></td>
-                            <td><input type="text" value="${fonctionnalitesProfil.nbValidReq}" disabled="disabled" />&nbsp;&nbsp;&nbsp;<input type="button" id="deleteLib"/>&nbsp;&nbsp;&nbsp;<input type="button" id="editFct"/></td>
+                            <td><input type="text" value="${fonctionnalitesProfil.nbValidReq}" disabled="disabled" /><button class="btn btn-link nafa-pencil nafa-large" onclick='EditerLibel()'></button><button class="btn btn-link nafa-trashcan nafa-large" onclick='deleteLibel()'></button></td>
                          </tr>
                         </c:forEach>
                        </c:if>

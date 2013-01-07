@@ -128,7 +128,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               
                <c:if test="${Affichemenus != null }">
                <tr>
-                <td>${utilisateur.langue.menus} &nbsp;&nbsp;&nbsp;<input type="button" id="ajouter" onclick='envoyerAction("ajouterMenus")'/></td>
+                <td>${utilisateur.langue.menus}<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterMenus")'></button></td>
                 <td></td>
                 </tr>
                <c:forEach items="${menusCourant.listmenus}" var="mnus">
@@ -151,7 +151,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                </c:if> 
            
               <tr>
-                 <td>${utilisateur.langue.nom} &nbsp;&nbsp;&nbsp;<input type="button" id="ajouter" onclick='envoyerAction("ajouterNom")'/></td>
+                 <td>${utilisateur.langue.nom}<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterNom")'></button></td>
                  <td>                         
                     <table>
                          <thead>
@@ -164,7 +164,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                           <c:forEach items="${menusCourant.libelles}" var="libelle">
                             <tr>
                               <td><input type="text" value="${libelle.langue.nomLangue}" disabled="disabled"/></td>
-                              <td><input type="text" value="${libelle.libMenus}" disabled="disabled"/>&nbsp;&nbsp;&nbsp;<input type="button" id="editFct" onclick='EditerLibelle("${libelle.langue.codeLangue}")'/>&nbsp;&nbsp;&nbsp;<input type="button" id="deleteLib" onclick='deleteLibelle("${libelle.langue.codeLangue}")'/></td>
+                              <td><input type="text" value="${libelle.libMenus}" disabled="disabled"/><button class="btn btn-link nafa-pencil nafa-large" onclick='EditerLibelle("${libelle.langue.codeLangue}")'></button><button class="btn btn-link nafa-trashcan nafa-large" onclick='deleteLibelle("${libelle.langue.codeLangue}")'></button></td>
                             </tr>   
                             </c:forEach>
                             <c:if test="${affLangue != null}">

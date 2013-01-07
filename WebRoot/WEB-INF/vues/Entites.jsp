@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -123,11 +124,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                  <td>${utilisateur.langue.utilRattach}</td>
                  <td>
                    <select name="utilRattach">
-                     <c:if test="${entiteCourant.utilRattach == 'O'}">
+                     <c:if test='${fn:startsWith(entiteCourant.utilRattach,"O")}'>
                        <option value="O">${utilisateur.langue.oui}</option>
                        <option value="N">${utilisateur.langue.non}</option>
                      </c:if>
-                     <c:if test="${entiteCourant.utilRattach == 'N'}">
+                     <c:if test='${fn:startsWith(entiteCourant.utilRattach,"N")}'>
                        <option value="N">${utilisateur.langue.non}</option>
                        <option value="O">${utilisateur.langue.oui}</option>                       
                      </c:if>
@@ -174,7 +175,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </tr>
            </c:if>   
               <tr>
-                 <td>${utilisateur.langue.nom} &nbsp;&nbsp;&nbsp;<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterNom")'></button></td>
+                 <td>${utilisateur.langue.nom}<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterNom")'></button></td>
                  <td>
                    <table>
                             <thead>
@@ -187,7 +188,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                               <c:forEach items="${listLibelle}" var="libelle">
                                <tr>
                                   <td><input type="text" value="${libelle.langue.nomLangue}" disabled="disabled"/></td>
-                                  <td><input type="text" value="${libelle.libEntite}" disabled="disabled"/>&nbsp;&nbsp;&nbsp;<input type="button" id="editFct" onclick='editerLibelle("${libelle.langue.codeLangue}")'/>&nbsp;&nbsp;&nbsp;<input type="button" id="deleteLib" onclick='deleteLibelle("${libelle.langue.codeLangue}")'/></td>
+                                  <td><input type="text" value="${libelle.libEntite}" disabled="disabled"/><button class="btn btn-link nafa-pencil nafa-large" onclick='editerLibelle("${libelle.langue.codeLangue}")'></button><button class="btn btn-link nafa-trashcan nafa-large" onclick='deleteLibelle("${libelle.langue.codeLangue}")'></button></td>
                                </tr>   
                               </c:forEach>
                               <c:if test="${affLangue != null}">

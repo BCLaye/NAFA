@@ -175,7 +175,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                </tr>
                
                <tr>
-                <td>${utilisateur.langue.menus} &nbsp;&nbsp;&nbsp;<input type="button" id="ajouter"/></td>
+                <td>${utilisateur.langue.menus}<button class="btn btn-link nafa-plus nafa-large" onclick='ajouterMenu()'></button>   </td>
                 <td></td>
                 </tr>
                 <c:forEach items="${profilCourant.menus}" var="menus">
@@ -184,7 +184,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <c:if test="${libelle.langue.codeLangue == utilisateur.langue.codeLangue}">
                           <tr>
                             <td></td>
-                            <td><input type="text" disabled="disabled" value="${libelle.libMenus}"/>&nbsp;&nbsp;&nbsp;<input type="button" id="deleteLib" onclick='deleteMenus("${menus.codeMenus}")'/></td>
+                            <td><input type="text" disabled="disabled" value="${libelle.libMenus}"/><button class="btn btn-link nafa-trashcan nafa-large" onclick='deleteMenus("${menus.codeMenus}")'></button></td>
                           </tr>
                         </c:if>
                       </c:forEach>
@@ -212,7 +212,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 
               </c:if> 
                <tr>
-                  <td>${utilisateur.langue.nom} &nbsp;&nbsp;&nbsp;<input type="button" id="ajouter" onclick='envoyerAction("ajouterNom")'/></td>
+                  <td>${utilisateur.langue.nom}<button class="btn btn-link nafa-plus nafa-large" onclick='envoyerAction("ajouterNom")'></button></td>
                   <td>
                       <table>
                             <thead>
@@ -225,7 +225,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                               <c:forEach items="${listLibelle}" var="libelle">
                                <tr>
                                   <td><input type="text" value="${libelle.langue.nomLangue}" disabled="disabled"/></td>
-                                  <td><input type="text" value="${libelle.libelle}" disabled="disabled"/>&nbsp;&nbsp;&nbsp;<input type="button" id="editFct" onclick='editerLibelle("${libelle.langue.codeLangue}")'/>&nbsp;&nbsp;&nbsp;<input type="button" id="deleteLib" onclick='deleteLibelle("${libelle.langue.codeLangue}")'/></td>
+                                  <td><input type="text" value="${libelle.libelle}" disabled="disabled"/><button class="btn btn-link nafa-pencil nafa-large" onclick='editerLibelle("${libelle.langue.codeLangue}")'></button><button class="btn btn-link nafa-trashcan nafa-large" onclick='deleteLibelle("${libelle.langue.codeLangue}")'></button></td>
                                </tr>   
                               </c:forEach>
                               <c:if test="${affLangue != null}">
