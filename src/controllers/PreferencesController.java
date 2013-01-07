@@ -60,6 +60,14 @@ public class PreferencesController extends MultiActionController {
 		Preferences pref = prefDAO.getPreferences(theme, couleur);
 		utilisateur.setPreference(pref);
 		util.setPreference(pref);
+		
+		String name = request.getParameter("nomUtil");
+		System.out.println("--------------"+name);
+		if(!name.trim().equals(util.getNomUtil())){
+			utilisateur.setNomUtil(name);
+			util.setNomUtil(name);
+		}
+		
 		utilDAO.save(util);
 		
 		request.getSession().setAttribute("utilisateur", utilisateur);

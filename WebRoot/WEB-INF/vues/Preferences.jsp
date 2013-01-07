@@ -97,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        <div class="control-group">
        		<label class="control-label">Nom &agrave; afficher</label>
        		<div class="controls">
-       			<input type="text" value="Papa Cheikh Cisse" />
+       			<input type="text" name="nomUtil" value="${utilisateur.nomUtil}" />
        		</div>
        </div>
        <div class="control-group">

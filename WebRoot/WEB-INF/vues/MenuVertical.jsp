@@ -21,7 +21,7 @@
 	  </div>
 	  <div id="uiao">
 		  <div id="userInfos">
-			  <span class="userName">Papa Cheikh Cisse</span>
+			  <span class="userName">${utilisateur.nomUtil}</span>
 			  <span class="userFunction">Administrateur</span>
 		  </div>
 		  <div id="userOperations">
