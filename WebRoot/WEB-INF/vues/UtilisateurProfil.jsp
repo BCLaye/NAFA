@@ -19,7 +19,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
 	
 	<link rel="stylesheet" href="css/jquery.ui.all.css" />
-    	
+    <link href='css/fonts.css' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet" type='text/css'>
 	<script src="javascript/jquery-1.8.0.js" type="text/javascript"></script>
 	<script src="javascript/jquery.ui.core.js" type="text/javascript"></script>
 	<script src="javascript/jquery.ui.widget.js" type="text/javascript"></script>
