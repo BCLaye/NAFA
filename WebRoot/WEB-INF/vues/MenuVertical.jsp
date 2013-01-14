@@ -25,7 +25,20 @@
 			  <span class="userFunction">Administrateur</span>
 		  </div>
 		  <div id="userOperations">
-			  <a class="btn nafa-tools btn-small" href="Preferences.html">${utilisateur.langue.preferences}</a>
+		      <div class="btn-group">
+		        <a class="btn dropdown-toggle nafa-tools nafa-large" data-toggle="dropdown" href="#">
+		        Action
+		        <span class="caret"></span>
+		        </a>
+		         <ul class="dropdown-menu"> 
+		           <li>
+		             <a class="btn nafa-tools btn-small" href="Preferences.html">${utilisateur.langue.preferences}</a> 
+		           </li>
+		           <li>
+		             <a class="btn nafa-tools btn-small" href="#">Maquer Menu</a> 
+		           </li>
+		         </ul>
+		      </div>
 			  <a class="btn nafa-switch-2 btn-small" href="Deconnexion.html">${utilisateur.langue.deconnexion}</a>
 		 </div>
 	  </div>
