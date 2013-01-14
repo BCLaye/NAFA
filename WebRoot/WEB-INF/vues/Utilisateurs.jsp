@@ -14,6 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
 	
 	<link rel="stylesheet" href="css/demos.css" /> 
+	<link rel="stylesheet" href="css/jquery.ui.all.css" />    
+	<script src="javascript/jquery-1.8.0.js" type="text/javascript"></script>
 	
 <script type="text/javascript">   
    $(function() {

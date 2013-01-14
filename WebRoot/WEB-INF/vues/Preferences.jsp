@@ -72,10 +72,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	       		<div class="span2">
 	       			<label>${utilisateur.langue.modelAffichageMenu}</label>
 			       	<label class="radio">
-			       		<input type="radio" name="theme" id="theme1" value="theme1" checked>${utilisateur.langue.horizontal}       
+			       		<input type="radio" name="theme" id="theme1" value="theme1" checked>${utilisateur.langue.vertical}       
 			       	</label>
 			       	<label class="radio">
-			       		<input type="radio" name="theme" id="theme2" value="theme2">${utilisateur.langue.vertical}
+			       		<input type="radio" name="theme" id="theme2" value="theme2">${utilisateur.langue.horizontal}
 			       	</label>
 	       		</div>
 	       		<div class="span5">

@@ -15,7 +15,7 @@
 <script type="text/javascript" src="javascript/bootstrap.js"></script>
 <script src="javascript/customColorPicker.js" type="text/javascript"></script> 
 
-<div id="logo">
+      <div id="logo">
 			<div id="logoImg">
 				<img alt="Enterprise's Logo" src="images/logo_45.png" width="112" height="84"/>
 			</div>

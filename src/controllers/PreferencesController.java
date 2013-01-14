@@ -62,7 +62,6 @@ public class PreferencesController extends MultiActionController {
 		util.setPreference(pref);
 		
 		String name = request.getParameter("nomUtil");
-		System.out.println("--------------"+name);
 		if(!name.trim().equals(util.getNomUtil())){
 			utilisateur.setNomUtil(name);
 			util.setNomUtil(name);
